@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import { dataCard } from './data-card';
 
 @Component({
   selector: 'app-card',
@@ -7,27 +8,24 @@ import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() dataPerson: {
-    index: string;
-    picture: string;
-    age: number;
-    name: string;
-    company: string;
-    phone: string;
-    address: string;
-    countLikes?: number;
-  };
 
-  @Output() parentFunction: EventEmitter<any> = new EventEmitter();
-  onLike(){
-    this.parentFunction.emit(this.dataPerson);
-  }
+
+
 
   constructor() {
 
    }
 
+
+
   ngOnInit(): void {
 
+  }
+
+  @Input() dataPerson: dataCard;
+
+  @Output() parentFunction: EventEmitter<any> = new EventEmitter();
+  onLike(){
+    this.parentFunction.emit(this.dataPerson);
   }
 }
