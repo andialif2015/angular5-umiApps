@@ -1,0 +1,25 @@
+<div class="card shadow-sm">
+  <mat-card >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ dataPerson.company}}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ dataPerson.picture }}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>Nama : {{ dataPerson.name }}</p>
+      <p>Umur : {{ dataPerson.age }} Tahun</p>
+      <p>Alamat : {{ dataPerson.address }}</p>
+    </mat-card-content>
+    <mat-card-actions >
+      <button mat-raised-button color="primary" (click)="onLike()">LIKE</button>
+      <button mat-button>SHARE</button>
+      <b>{{ dataPerson.countLikes }}</b>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+
+
+ <!-- <mat-card>Simple card</mat-card> -->
