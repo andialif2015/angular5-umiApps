@@ -50,7 +50,7 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col" *ngFor="let dataPerson of listPerson ">
-          <app-card class="my-alternate-theme" [dataPerson]="dataPerson" (parentFunction)="parentFunction($event)"></app-card>
+          <app-card class="my-alternate-theme" [dataPerson]="dataPerson" (counterLike)="parentFunction($event)"></app-card>
         </div>
       </div>
     </div>

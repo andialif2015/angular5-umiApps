@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular5-umiapps';
   parentFunction(data){
-    this.listPerson[data.index].countLikes++;
+      console.log(this.listPerson[data.index].countLikes = data.countLikes);
   }
 
   listPerson = [

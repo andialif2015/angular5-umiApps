@@ -1,5 +1,5 @@
 export interface dataCard{
-  index: string;
+  index: number;
   picture: string;
   age: number;
   name: string;

@@ -8,15 +8,9 @@ import { dataCard } from './data-card';
 })
 export class CardComponent implements OnInit {
 
-
-
-
-
   constructor() {
 
    }
-
-
 
   ngOnInit(): void {
 
@@ -24,8 +18,11 @@ export class CardComponent implements OnInit {
 
   @Input() dataPerson: dataCard;
 
-  @Output() parentFunction: EventEmitter<any> = new EventEmitter();
+  @Output() counterLike: EventEmitter<{ index:number;  countLikes?: number;}> = new EventEmitter();
   onLike(){
-    this.parentFunction.emit(this.dataPerson);
+    this.dataPerson.countLikes = this.dataPerson.countLikes + 1;
+    this.counterLike.emit({
+      index: this.dataPerson.index,
+      countLikes: this.dataPerson.countLikes});
   }
 }
